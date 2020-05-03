@@ -1,0 +1,7 @@
+.idea
+chromedriver
+target/
+allure-results/
+ExtentReports/
+.DS_Store
+GoogleTest.iml
