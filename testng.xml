@@ -8,7 +8,7 @@
 
     <test name="GoogleTest">
         <classes>
-            <class name="tests.GoogleTest"/>
+            <class name="tests.NewFeaturesTest"/>
         </classes>
     </test>
 </suite>

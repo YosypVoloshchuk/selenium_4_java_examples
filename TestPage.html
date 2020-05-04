@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+            table-layout: auto;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 39px;
+        }
+
+        th,td {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function myFunction(id) {
+            var a = document.getElementById(id).innerHTML;
+            document.getElementById(id).innerHTML = "You click on " + a;
+        }
+    </script>
+</head>
+<body>
+<table cellspacing="2" border="1" cellpadding="5" width="1500">
+    <tr>
+        <td onclick="myFunction('one')" id="one">
+            <div>1</div></td>
+        <td onclick="myFunction('two')" id="two">     <div>2</div></td>
+        <td onclick="myFunction('three')" id="three">     <div>3</div></td>
+    </tr>
+    <tr>
+        <td onclick="myFunction('four')" id="four">     <div>4</div> </td>
+        <td onclick="myFunction('five')"id="five">
+        <div>5</div>
+        </td>
+        <td onclick="myFunction('six')" id="six">     <div>6</div></td>
+    </tr>
+    <tr>
+        <td onclick="myFunction('seven')" id="seven">     <div>7</div></td>
+        <td onclick="myFunction('eight')" id="eight">     <div>8</div></td>
+        <td onclick="myFunction('nine')" id="nine">     <div>9</div></td>
+    </tr>
+</table>
+</body>
+</html>

@@ -1,5 +1,6 @@
 package tests;
 import PageObjects.GooglePage;
+import PageObjects.MyHtmlTest;
 import PageObjects.SearchPage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,8 +19,7 @@ public class BasicTest {
     public static ChromeDriver driver;
     protected GooglePage googlePage=null;
     protected SearchPage searchPage=null;
-
-//    public static ThreadLocal<WebDriver> threadDriver = new ThreadLocal<WebDriver>();;
+    protected MyHtmlTest myHtmlTest=null;
 
     @BeforeMethod
     public void setUp(){
@@ -34,7 +34,7 @@ public class BasicTest {
         driver.manage().timeouts().setScriptTimeout(30, TimeUnit.SECONDS);
         googlePage = new GooglePage(driver);
         searchPage = new SearchPage(driver);
-        googlePage.open();
+        myHtmlTest = new MyHtmlTest(driver);
     }
 
     protected WebDriver getWebDriver(){

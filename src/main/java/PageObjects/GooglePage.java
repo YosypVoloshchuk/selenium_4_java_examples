@@ -52,6 +52,7 @@ public class GooglePage extends PageAbstract{
 
     @Step
     public void openNewWindowAndNewTab(String text) throws InterruptedException {
+        this.open();
         this.enterText(this.search_field, text);
         this.search_button.click();
         WebDriver tab = driver.switchTo().newWindow(WindowType.TAB);
@@ -92,8 +93,9 @@ public class GooglePage extends PageAbstract{
         Thread.sleep(3000);
     }
 
-
+    @Step
     public  void emulateNetworkConditionTest() throws MalformedURLException, InterruptedException {
+        this.open();
         DevTools chromeDevTools = driver.getDevTools();
         chromeDevTools.createSession();
         chromeDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
@@ -102,16 +104,14 @@ public class GooglePage extends PageAbstract{
         driver.navigate().to(base_url);
         Thread.sleep(5000);
     }
-
+    @Step
     public void filterUrls() throws InterruptedException {
         DevTools chromeDevTools = driver.getDevTools();
         chromeDevTools.createSession();
         chromeDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
-        //set blocked URL patterns
         chromeDevTools.send(Network.setBlockedURLs(ImmutableList.of("*.css", "*.jpg", "*.js")));
         driver.navigate().to("https://rozetka.com.ua/");
-        Thread.sleep(500000);
-
+        Thread.sleep(10000);
     }
 
 
