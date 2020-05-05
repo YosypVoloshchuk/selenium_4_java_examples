@@ -6,9 +6,12 @@ Java (last version), Chrome(last), Chromedriver(last)
 
 ### Chromedriver install
 ~~~~~~~~
-macos -
+## Macos
+
 brew cask install chromedriver 
-Windows
+
+## Windows
+
 kenst.com/2019/02/installing-chromedriver-on-windows/
 ~~~~~~~~
 ### Run tests
