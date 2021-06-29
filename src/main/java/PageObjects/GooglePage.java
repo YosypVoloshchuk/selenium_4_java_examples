@@ -33,7 +33,7 @@ import java.util.logging.Logger;
 import static org.openqa.selenium.devtools.network.Network.*;
 
 public class GooglePage extends PageAbstract{
-    @FindBy(xpath = "//*[@id='tsf']/div[2]/div[1]/div[1]/div/div[2]/input")
+    @FindBy(css = "input")
     protected WebElement search_field;
     @FindBy(className = "gNO89b")
     protected WebElement search_button;
@@ -74,7 +74,6 @@ public class GooglePage extends PageAbstract{
         driver.switchTo().window(parentTab);
         WebDriver window = driver.switchTo().newWindow(WindowType.WINDOW);
         window.get("https://weather.com/");
-        Thread.sleep(15000);
     }
 
     @Step
@@ -86,7 +85,6 @@ public class GooglePage extends PageAbstract{
         chromeDevTools.send(Security.enable());
         chromeDevTools.send(Security.setIgnoreCertificateErrors(true));
         driver.get("https://expired.badssl.com/");
-        Thread.sleep(3000);
         chromeDevTools.send(Security.disable());
         chromeDevTools.send(Security.setIgnoreCertificateErrors(false));
         driver.get("https://expired.badssl.com/");
@@ -111,7 +109,7 @@ public class GooglePage extends PageAbstract{
         chromeDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
         chromeDevTools.send(Network.setBlockedURLs(ImmutableList.of("*.css", "*.jpg", "*.js")));
         driver.navigate().to("https://rozetka.com.ua/");
-        Thread.sleep(10000);
+        Thread.sleep(100);
     }
 
 
