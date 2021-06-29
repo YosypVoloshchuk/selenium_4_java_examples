@@ -31,12 +31,12 @@ jobs:
       - run:
           name: mvn test
           command: mvn clean test
-      - run:
-          name: mvn allure report
-          command: mvn allure:report
-          when: always
-      - store_test_results:
-          path: target/allure-results
-      - store_artifacts:
-          path: target/site/allure-maven-plugin
-          destination: artifact-file
+#      - run:
+#          name: mvn allure report
+#          command: mvn allure:report
+#          when: always
+#      - store_test_results:
+#          path: target/allure-results
+#      - store_artifacts:
+#          path: target/site/allure-maven-plugin
+#          destination: artifact-file

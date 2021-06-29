@@ -4,3 +4,5 @@ target/
 allure-results/
 .DS_Store
 GoogleTest.iml
+_book
+.deploy
