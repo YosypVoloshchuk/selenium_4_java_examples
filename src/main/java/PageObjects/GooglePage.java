@@ -1,34 +1,21 @@
 package PageObjects;
 
-import Utils.User;
 import com.google.common.collect.ImmutableList;
 import io.qameta.allure.Step;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.log.Log;
 import org.openqa.selenium.devtools.network.Network;
-import org.openqa.selenium.devtools.network.model.ConnectionType;
-import org.openqa.selenium.devtools.network.model.LoadingFailed;
 import org.openqa.selenium.devtools.security.Security;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.locators.RelativeLocator;
-import org.slf4j.LoggerFactory;
-
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-import java.util.logging.Logger;
 
 import static org.openqa.selenium.devtools.network.Network.*;
 
