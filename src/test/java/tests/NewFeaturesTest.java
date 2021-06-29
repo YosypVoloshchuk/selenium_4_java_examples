@@ -14,25 +14,25 @@ import java.net.MalformedURLException;
 /**
  * Created by yoshka on 17.11.17.
  */
-@Listeners({ TestListener.class })
+//@Listeners({ TestListener.class })
 @Epic("Regression Tests")
 @Feature("New features Tests")
 public class NewFeaturesTest extends BasicTest {
     private String text="autotest";
 
-    @Test (priority = 0, description="Check opening new tab and new window")
-    @Severity(SeverityLevel.BLOCKER)
-    @Description("Test Description: just simple check")
-    public void checkOpeningNewWindowAndTab() throws InterruptedException, MalformedURLException {
-    googlePage.openNewWindowAndNewTab(text);
-        Assert.assertTrue(true);
-    }
-//
-//    @Test (priority = 1, description="Check opening insecure site")
-//    public void checkLoaInsecure() throws InterruptedException, MalformedURLException {
-//        googlePage.loadInsecureWebsite();
-//
+//    @Test (priority = 0, description="Check opening new tab and new window")
+//    @Severity(SeverityLevel.BLOCKER)
+//    @Description("Test Description: just simple check")
+//    public void checkOpeningNewWindowAndTab() throws InterruptedException, MalformedURLException {
+//    googlePage.openNewWindowAndNewTab(text);
+//        Assert.assertTrue(true);
 //    }
+//
+    @Test (priority = 1, description="Check opening insecure site")
+    public void checkLoaInsecure() throws InterruptedException, MalformedURLException {
+        googlePage.loadInsecureWebsite();
+
+    }
 //
 //    @Test (priority = 2, description="emulate network offline")
 //    public void checkTurningNetworkOff() throws InterruptedException, MalformedURLException {
