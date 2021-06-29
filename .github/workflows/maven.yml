@@ -21,5 +21,5 @@ jobs:
         run: chmod +x /__w/selenium_4_java_examples/selenium_4_java_examples/ExtentReports/ExtentReportResults.html
       - name: Run tests
         run: mvn clean test
-      - name: generate report
-        run: mvn allure:report
+#      - name: generate report
+#        run: mvn allure:report
