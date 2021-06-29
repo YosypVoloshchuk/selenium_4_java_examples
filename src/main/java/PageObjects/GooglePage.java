@@ -7,8 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.network.Network;
-import org.openqa.selenium.devtools.security.Security;
+import org.openqa.selenium.devtools.v91.network.Network;
+import org.openqa.selenium.devtools.v91.security.Security;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import java.net.MalformedURLException;
@@ -16,8 +16,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
-
-import static org.openqa.selenium.devtools.network.Network.*;
 
 public class GooglePage extends PageAbstract{
     @FindBy(css = "input")
@@ -85,7 +83,7 @@ public class GooglePage extends PageAbstract{
         chromeDevTools.createSession();
         chromeDevTools.send(Network.enable(Optional.empty(), Optional.empty(), Optional.empty()));
         chromeDevTools.send(
-                emulateNetworkConditions(true,100,200000,100000, Optional.empty()));
+                Network.emulateNetworkConditions(true,100,200000,100000, Optional.empty()));
         driver.navigate().to(base_url);
         Thread.sleep(5000);
     }

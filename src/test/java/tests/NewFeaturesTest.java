@@ -3,7 +3,6 @@ package tests;
 import PageObjects.MyHtmlTest;
 import Utils.User;
 import io.qameta.allure.*;
-import org.openqa.selenium.devtools.network.model.ConnectionType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.annotations.Listeners;

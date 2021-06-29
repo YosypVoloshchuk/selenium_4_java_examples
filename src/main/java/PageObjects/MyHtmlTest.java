@@ -5,14 +5,9 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.devtools.DevTools;
-import org.openqa.selenium.devtools.network.Network;
-import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.locators.RelativeLocator;
 
-import java.util.List;
-import java.util.Optional;
 
 public class MyHtmlTest extends PageAbstract{
 
@@ -40,7 +35,7 @@ public class MyHtmlTest extends PageAbstract{
 
     private void findElementByRelativeLocator() throws InterruptedException {
         WebElement el = driver.findElement(RelativeLocator
-                .withTagName("div")
+                .with(By.cssSelector("div"))
                 .toRightOf(By.cssSelector("#one"))
         .above(By.cssSelector("#eight"))
         .below(By.cssSelector("#three")));
