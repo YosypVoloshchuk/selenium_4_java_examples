@@ -20,13 +20,13 @@ import java.net.MalformedURLException;
 public class NewFeaturesTest extends BasicTest {
     private String text="autotest";
 
-    @Test (priority = 0, description="Check opening new tab and new window")
-    @Severity(SeverityLevel.BLOCKER)
-    @Description("Test Description: just simple check")
-    public void checkOpeningNewWindowAndTab() throws InterruptedException, MalformedURLException {
-    googlePage.openNewWindowAndNewTab(text);
-        Assert.assertTrue(true);
-    }
+//    @Test (priority = 0, description="Check opening new tab and new window")
+//    @Severity(SeverityLevel.BLOCKER)
+//    @Description("Test Description: just simple check")
+//    public void checkOpeningNewWindowAndTab() throws InterruptedException, MalformedURLException {
+//    googlePage.openNewWindowAndNewTab(text);
+//        Assert.assertTrue(true);
+//    }
 //
 //    @Test (priority = 1, description="Check opening insecure site")
 //    public void checkLoaInsecure() throws InterruptedException, MalformedURLException {
@@ -44,10 +44,10 @@ public class NewFeaturesTest extends BasicTest {
 //        googlePage.filterUrls();
 //    }
 //
-//    @Test (priority = 5, description="check filtering url")
-//    public void checkUrlCheckRelativeLocators() throws InterruptedException {
-//        myHtmlTest.checkRelativeLocators();
-//    }
+    @Test (priority = 5, description="check filtering url")
+    public void checkUrlCheckRelativeLocators() throws InterruptedException {
+        myHtmlTest.checkRelativeLocators();
+    }
 
 
 }

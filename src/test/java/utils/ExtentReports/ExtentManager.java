@@ -13,10 +13,10 @@ public class ExtentManager {
             //Set HTML reporting file location
             String workingDir = System.getProperty("user.dir");
             try {
-                extent = new ExtentReports(workingDir+"\\ExtentReports\\ExtentReportResults.html", true);
+                extent = new ExtentReports(workingDir+"/ExtentReports/ExtentReportResults.html", true);
             }
             catch (Exception e){
-                extent = new ExtentReports(workingDir+"\\ExtentReports\\ExtentReportResults.html", false);
+                extent = new ExtentReports(workingDir+"/ExtentReports/ExtentReportResults.html", false);
             }
         }
         return extent;
