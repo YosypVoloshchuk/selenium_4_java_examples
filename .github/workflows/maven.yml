@@ -18,7 +18,7 @@ jobs:
       - name: show files
         run: ls
       - name: Change wrapper permissions
-        run: chmod +x /__w/selenium_4_java_examples/selenium_4_java_examples\ExtentReports\ExtentReportResults.html
+        run: chmod +x /__w/selenium_4_java_examples/selenium_4_java_examples/ExtentReports/ExtentReportResults.html
       - name: Run tests
         run: mvn clean test
       - name: generate report
