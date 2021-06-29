@@ -12,7 +12,12 @@ public class ExtentManager {
         if(extent == null){
             //Set HTML reporting file location
             String workingDir = System.getProperty("user.dir");
-            extent = new ExtentReports(workingDir+"\\ExtentReports\\ExtentReportResults.html", true);
+            try {
+                extent = new ExtentReports(workingDir+"\\ExtentReports\\ExtentReportResults.html", true);
+            }
+            catch (Exception e){
+                extent = new ExtentReports(workingDir+"\\ExtentReports\\ExtentReportResults.html", false);
+            }
         }
         return extent;
     }

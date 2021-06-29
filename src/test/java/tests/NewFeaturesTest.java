@@ -14,7 +14,7 @@ import java.net.MalformedURLException;
 /**
  * Created by yoshka on 17.11.17.
  */
-//@Listeners({ TestListener.class })
+@Listeners({ TestListener.class })
 @Epic("Regression Tests")
 @Feature("New features Tests")
 public class NewFeaturesTest extends BasicTest {

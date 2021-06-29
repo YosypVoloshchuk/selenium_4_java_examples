@@ -42,15 +42,19 @@ public class GooglePage extends PageAbstract{
         this.search_button.click();
         WebDriver tab = driver.switchTo().newWindow(WindowType.TAB);
         tab.get("https://yahoo.com");
+        System.out.println("this is test  1");
         WebDriver tab2 = driver.switchTo().newWindow(WindowType.TAB);
         tab2.get("https://medium.com/");
         Thread.sleep(5000);
         Set<String> tabs = driver.getWindowHandles();
         List<String> list =new ArrayList<String>(tabs);
+        System.out.println("this is test  2");
         String parentTab = list.get(0);
+
         String childFirstTab = list.get(1);
         String childSecondTab = list.get(2);
         driver.switchTo().window(parentTab);
+        System.out.println("this is test  3");
         Thread.sleep(2000);
         driver.switchTo().window(childFirstTab);
         Thread.sleep(2000);
